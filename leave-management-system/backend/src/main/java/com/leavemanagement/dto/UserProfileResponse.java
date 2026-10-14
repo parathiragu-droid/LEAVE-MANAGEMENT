@@ -1,0 +1,17 @@
+package com.leavemanagement.dto;
+
+import com.leavemanagement.model.Role;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserProfileResponse {
+    private String name;
+    private String email;
+    private Role role;
+}

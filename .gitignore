@@ -1,0 +1,57 @@
+# ==============================================================================
+# Leave Management System - Workspace Root .gitignore
+# ==============================================================================
+
+# Environment and secrets
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node / Frontend build outputs
+node_modules/
+dist/
+dist-ssr/
+build/
+.npm
+
+# Maven / Java backend build outputs
+target/
+*.class
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE & Editor configurations
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch scripts and temporary testing outputs
+scratch/
+test-results/
