@@ -45,7 +45,11 @@ public class CorsConfig {
             }
         }
 
-        configuration.setAllowedOrigins(allowedOrigins);
+        if (allowedOrigins.contains("*")) {
+            configuration.setAllowedOriginPatterns(List.of("*"));
+        } else {
+            configuration.setAllowedOrigins(allowedOrigins);
+        }
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "X-Requested-With", "Origin"));
         configuration.setExposedHeaders(List.of("Authorization"));
